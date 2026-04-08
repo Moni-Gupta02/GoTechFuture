@@ -20,8 +20,7 @@ const Hero = () => {
                     <img
                         src="/success-stories/story-1.png"
                         alt="Students presenting artwork at a GoTechFuture Foundation workshop"
-                        className="hero-img"
-                        style={{ transform: 'none', maxHeight: '520px', width: '100%', objectFit: 'cover' }}
+                        className="hero-img hero-img--home"
                     />
                 </div>
             </div>

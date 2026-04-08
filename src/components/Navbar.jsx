@@ -30,21 +30,14 @@ const Navbar = () => {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
             <div className="nav-container">
                 <div className="logo">
-                    <Link to="/" onClick={() => setMenuOpen(false)} style={{ textDecoration: 'none' }}>
-                        <div>
-                            <div style={{ fontWeight: '800', fontSize: '1.35rem', letterSpacing: '-0.5px', lineHeight: 1.15 }}>
-                                <span style={{ color: 'var(--secondary)' }}>Go</span>
-                                <span style={{ color: 'var(--primary)' }}>Tech</span>
-                                <span style={{ color: 'var(--accent)' }}>Future</span>
+                    <Link to="/" onClick={() => setMenuOpen(false)} className="nav-logo-link">
+                        <div className="nav-logo">
+                            <div className="nav-logo-title">
+                                <span className="nav-logo-go">Go</span>
+                                <span className="nav-logo-tech">Tech</span>
+                                <span className="nav-logo-future">Future</span>
                             </div>
-                            <div style={{
-                                fontSize: '0.65rem',
-                                letterSpacing: '4px',
-                                textTransform: 'uppercase',
-                                color: '#555',
-                            }}>
-                                FOUNDATION
-                            </div>
+                            <div className="nav-logo-sub">FOUNDATION</div>
                         </div>
                     </Link>
                 </div>
