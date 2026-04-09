@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { SocialFooterLinks } from './SocialLinks';
 
 const Footer = () => {
     return (
@@ -17,7 +18,8 @@ const Footer = () => {
                         </div>
                     </div>
                     <p className="footer-tagline">
-                        Teaching coding, guiding careers, and helping young people—especially girls—prepare for education and the future.
+                        We teach coding, guide study and career steps, and stand with girls and young women—including help with school admission
+                        and knowing important helplines like 1090 and 1098.
                     </p>
                     <nav className="footer-nav" aria-label="Footer">
                         <Link to="/what-we-do">What we do</Link>
@@ -28,11 +30,7 @@ const Footer = () => {
                         <span aria-hidden="true"> · </span>
                         <Link to="/contact">Contact</Link>
                     </nav>
-                    <div className="social-links">
-                        <a href="https://www.youtube.com/@GoTechFutureFoundation" target="_blank" rel="noopener noreferrer">YouTube</a>
-                        <a href="https://www.linkedin.com/company/go-tech-future-foundation/?viewAsMember=true" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                        <a href="https://www.instagram.com/gotechfuture?igsh=djFwM3kxNWI3YnBj" target="_blank" rel="noopener noreferrer">Instagram</a>
-                    </div>
+                    <SocialFooterLinks />
                     <p className="copyright">&copy; {new Date().getFullYear()} GoTechFuture Foundation. All rights reserved.</p>
                 </div>
             </div>

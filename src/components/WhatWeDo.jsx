@@ -3,32 +3,32 @@ import React from 'react';
 const pillars = [
     {
         title: 'Coding & digital skills',
-        text: 'Hands-on programming and logical thinking so learners see technology as something they can use—not only watch.',
+        text: 'We teach programming in small, friendly steps. Learners try things on the keyboard, fix mistakes, and see that technology is something they can use—not only watch.',
     },
     {
         title: 'Career & study guidance',
-        text: 'Workshops and mentoring to connect interests with realistic next steps: subjects, courses, and opportunities.',
+        text: 'We run workshops and one-to-one conversations about subjects, courses, and jobs. We help map simple next steps so the future feels less confusing.',
     },
     {
         title: 'Supporting girls in STEM',
-        text: 'Safe spaces, peer support, and confidence-building so girls can aim for further study in tech and science.',
+        text: 'We create safe groups, mentoring, and clear information—including help with school admission and study plans, plus awareness of helplines such as 1090 and 1098 and other support.',
     },
     {
         title: 'Community & creativity',
-        text: 'Murals, art, and group projects alongside tech—for teamwork, expression, and belonging.',
+        text: 'Murals, art, and team projects sit next to tech skills—so young people build confidence, friendship, and pride in their community.',
     },
 ];
 
 const WhatWeDo = () => {
     return (
         <main className="page-main page-what-we-do">
-            <header className="page-hero page-hero--brand">
+            <header className="page-hero page-hero--brand page-hero--wordmark-tech">
                 <div className="container page-hero-inner">
                     <p className="page-hero-eyebrow">Programs</p>
                     <h1 className="page-hero-title">What we do</h1>
                     <p className="page-lead page-hero-lead">
-                        We run practical programs in schools and communities—blending coding, mentoring, and preparation
-                        so young people, especially girls, can thrive in school and beyond.
+                        We run hands-on programs in schools and neighbourhoods. We mix coding, mentoring, and honest conversations about school
+                        and safety so young people—especially girls—can learn, plan, and feel supported.
                     </p>
                 </div>
             </header>

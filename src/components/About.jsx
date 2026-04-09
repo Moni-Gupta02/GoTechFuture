@@ -14,8 +14,8 @@ const About = () => {
                     <p className="page-hero-eyebrow">Our story</p>
                     <h1 className="page-hero-title">About us</h1>
                     <p className="page-lead page-hero-lead">
-                        GoTechFuture Foundation exists so young people—especially girls—can access coding education,
-                        career guidance, and support for further study in one trusted place.
+                        GoTechFuture Foundation is here so young people—especially girls—can learn technology, ask honest questions about
+                        school and careers, and find support in one welcoming place.
                     </p>
                 </div>
             </header>
@@ -26,24 +26,25 @@ const About = () => {
                         <article className="about-prose-card">
                             <h2 className="about-section-heading">Our mission</h2>
                             <p>
-                                Many students do not receive enough guidance about careers or how to prepare for higher education.
-                                Some feel unsure about what to study, what is possible, or how technology fits into their future.
+                                Many students do not get enough clear advice about what to study next, how to apply for school, or how
+                                technology can fit into their lives. Some feel shy, stuck, or unsure whom to trust.
                             </p>
                             <p>
-                                We help learners understand their interests, build practical skills—starting with coding and digital literacy—and
-                                connect those strengths to real pathways. Even if someone does not yet know their dream job, we work with them
-                                to find direction and move forward with confidence.
+                                We start with simple skills—coding and using digital tools—and we listen. We help learners connect what they
+                                enjoy with real next steps: subjects, courses, and practical goals. No one needs a perfect plan on day one;
+                                we walk beside them as they grow.
                             </p>
                             <p className="about-prose-card__last">
-                                We place special emphasis on supporting girls: mentoring, safe learning spaces, and encouragement to pursue
-                                further study in fields where they have been underrepresented—including technology and STEM.
+                                We give extra attention to girls and young women: mentoring, safe group learning, and help with school admission
+                                and study planning. We also share information about important helplines—such as <strong>1090</strong> and{' '}
+                                <strong>1098</strong> in Vilages—and other support options, so people know where to turn in difficult moments.
                             </p>
                         </article>
                         <aside className="about-aside">
                             <div className="about-highlight-card">
                                 <span className="about-highlight-label">What we believe</span>
                                 <p className="about-highlight-text">
-                                    Every young person deserves a fair chance to learn technology, explore careers, and imagine a future they choose.
+                                    Every young person deserves a fair chance to learn, to ask questions without fear, and to build a future they help choose.
                                 </p>
                             </div>
                             <ul className="about-pill-list">
@@ -59,7 +60,7 @@ const About = () => {
             <section className="about-quote-strip">
                 <div className="container">
                     <blockquote className="about-quote">
-                        <p>Change starts with clarity—when students see what is possible, they can build the skills to get there.</p>
+                        <p>When young people see a clear next step—and know someone believes in them—they can move forward one day at a time.</p>
                     </blockquote>
                 </div>
             </section>
@@ -81,7 +82,7 @@ const About = () => {
                                 </svg>
                             </ValueIcon>
                             <h3>Equity in learning</h3>
-                            <p>Opportunity should not depend on postcode or background. We bring programs to communities where support is needed most.</p>
+                            <p>Opportunity should not depend on where someone lives or what their family earns. We bring programs to places that need extra support.</p>
                         </article>
                         <article className="value-card">
                             <ValueIcon>

@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
+import { SocialContactList } from './SocialLinks';
 
-const CONTACT_EMAIL = 'guptamoni002@gmail.com';
+const CONTACT_EMAIL = 'gotech0088@gmail.com';
 const FORMSUBMIT_AJAX = `https://formsubmit.co/ajax/${CONTACT_EMAIL}`;
 
 const Contact = () => {
@@ -58,12 +59,13 @@ const Contact = () => {
 
     return (
         <main className="page-main page-contact">
-            <header className="page-hero page-hero--brand">
+            <header className="page-hero page-hero--brand page-hero--wordmark-go">
                 <div className="container page-hero-inner">
                     <p className="page-hero-eyebrow">Get in touch</p>
                     <h1 className="page-hero-title">Contact us</h1>
                     <p className="page-lead page-hero-lead">
-                        Whether you are a student, parent, educator, or partner—we would love to hear from you.
+                        If you are a student, parent, teacher, or partner and you want to talk to us, write to us. We are happy to answer questions
+                        about programs, volunteering, or how we can work together.
                     </p>
                 </div>
             </header>
@@ -80,17 +82,7 @@ const Contact = () => {
                         </div>
                         <div className="contact-info-card">
                             <h2 className="contact-info-heading">Follow along</h2>
-                            <ul className="contact-social-list">
-                                <li>
-                                    <a href="https://www.youtube.com/@GoTechFutureFoundation" target="_blank" rel="noopener noreferrer">YouTube</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.linkedin.com/company/go-tech-future-foundation/?viewAsMember=true" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/gotechfuture?igsh=djFwM3kxNWI3YnBj" target="_blank" rel="noopener noreferrer">Instagram</a>
-                                </li>
-                            </ul>
+                            <SocialContactList />
                         </div>
                         <div className="contact-info-card contact-info-card--accent">
                             <p className="contact-accent-text">

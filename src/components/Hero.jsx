@@ -6,14 +6,15 @@ const Hero = () => {
         <header className="hero" id="home">
             <div className="hero-container">
                 <div className="hero-content">
-                    <h1>Code, guidance, and brighter futures for every learner</h1>
+                    <h1>Learning, support, and hope for every young person</h1>
                     <p>
-                        GoTechFuture Foundation teaches coding, offers career mentoring, and helps girls prepare for further study—
-                        so young people can grow skills, confidence, and a clear path forward.
+                        GoTechFuture Foundation is a non-profit that teaches coding, answers career and study questions, and walks with
+                        girls and young women step by step. We want every learner to feel ready for school, work, and life—not alone, and
+                        never without clear information.
                     </p>
                     <div className="hero-buttons">
-                        <Link to="/what-we-do" className="btn btn-primary" style={{ borderRadius: '8px', padding: '1rem 2rem' }}>What we do</Link>
-                        <Link to="/contact" className="btn btn-outline" style={{ borderRadius: '8px', padding: '1rem 2rem' }}>Get in touch</Link>
+                        <Link to="/what-we-do" className="btn btn-hero-wordmark-tech hero-btn-pill">What we do</Link>
+                        <Link to="/contact" className="btn btn-hero-wordmark-go hero-btn-pill">Get in touch</Link>
                     </div>
                 </div>
                 <div className="hero-image-wrapper">

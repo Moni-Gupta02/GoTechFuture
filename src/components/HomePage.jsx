@@ -11,23 +11,25 @@ const HomePage = () => {
                     <div className="section-block text-center mb-8">
                         <h2 className="section-title">What We Stand For</h2>
                         <p className="section-subtitle mx-auto max-w-2xl">
-                            We combine hands-on coding lessons, career guidance, and academic support so young people—especially girls—can build real skills and plan confident futures.
+                            We believe every young person deserves simple, honest help: learn how technology works, ask questions about
+                            school and jobs, and get support when the path feels unclear. We focus on girls and young women because
+                            extra encouragement and the right information can change what feels possible.
                         </p>
                     </div>
                     <div className="card-grid-3 home-pillars">
                         <div className="card text-center">
                             <h3>Code &amp; digital skills</h3>
-                            <p>Practical programming and problem-solving in a supportive classroom environment.</p>
+                            <p>We teach coding in plain language—small steps, lots of practice, and room to ask questions.</p>
                             <Link to="/what-we-do" className="btn btn-outline btn-block mt-4">Learn more</Link>
                         </div>
                         <div className="card text-center">
                             <h3>Career guidance</h3>
-                            <p>Helping students explore interests, set goals, and understand pathways into work and higher study.</p>
+                            <p>We help students think about what they enjoy, what they can study next, and how to plan one step at a time.</p>
                             <Link to="/what-we-do" className="btn btn-outline btn-block mt-4">Learn more</Link>
                         </div>
                         <div className="card text-center">
                             <h3>Girls&apos; education</h3>
-                            <p>Mentoring and preparation so girls can pursue further study and technology with confidence.</p>
+                            <p>We mentor girls and share clear information—from school admission steps to safety and helpline numbers when they need it.</p>
                             <Link to="/what-we-do" className="btn btn-outline btn-block mt-4">Learn more</Link>
                         </div>
                     </div>
@@ -38,7 +40,10 @@ const HomePage = () => {
                     <div>
                         <h2 className="section-title" style={{ textAlign: 'left' }}>Our impact</h2>
                         <p style={{ color: 'var(--gray)', marginBottom: '1.5rem', lineHeight: 1.7 }}>
-                            From creative workshops to community murals and student-led projects, we measure success by confidence gained, skills learned, and doors opened for the next generation.
+                            We are still growing, but we already have stories to tell: more than <strong>20 girls</strong> have received hands-on
+                            help to move forward with <strong>school admission and study plans</strong>. We have also guided girls and women on
+                            important <strong>helpline numbers</strong>—including <strong>1090</strong> and <strong>1098</strong>—and many other ways to stay safe and get support.
+                            Workshops, art, and community projects still sit at the heart of how we learn together.
                         </p>
                         <Link to="/impact" className="btn btn-primary">See our impact</Link>
                     </div>
@@ -50,7 +55,7 @@ const HomePage = () => {
             <section className="section bg-light">
                 <div className="container text-center">
                     <h2 className="section-title">Success stories</h2>
-                    <p className="section-subtitle mx-auto">Moments from our classrooms and community programs—creativity, pride, and growth in action.</p>
+                    <p className="section-subtitle mx-auto">Photos and moments from our classes and community work—where ideas turn into confidence.</p>
                     <Link to="/success-stories" className="btn btn-primary">View stories</Link>
                 </div>
             </section>
