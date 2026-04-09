@@ -21,6 +21,11 @@ const stories = [
         title: 'Vision for a greener school',
         caption: 'Student poster illustrating care for the environment and our shared mission of education and responsibility.',
     },
+    {
+        src: '/success-stories/story-community-holi.png',
+        title: 'Colour, joy, and togetherness',
+        caption: 'Learners celebrate Holi in class—community, culture, and learning in the same room. Real grassroots spaces where childrens people feel they belong.',
+    },
 ];
 
 const SuccessStories = () => {

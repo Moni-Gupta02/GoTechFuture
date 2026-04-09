@@ -53,6 +53,26 @@ const HomePage = () => {
                 </div>
             </section>
             <section className="section bg-light">
+                <div className="container split-layout reverse" style={{ maxWidth: '1100px' }}>
+                    <div className="rounded-img shadow-lg overflow-hidden home-community-photo">
+                        <img
+                            src="/success-stories/story-community-holi.png"
+                            alt="Group of children's and youth enjoy with colours in a classroom with learning charts on the walls"
+                            style={{ width: '100%', objectFit: 'cover' }}
+                            loading="lazy"
+                        />
+                    </div>
+                    <div>
+                        <h2 className="section-title" style={{ textAlign: 'left' }}>Real classrooms, real joy</h2>
+                        <p style={{ color: 'var(--gray)', marginBottom: '1.25rem', lineHeight: 1.7 }}>
+                            Alongside lessons and projects, we share festivals and everyday moments that build trust. This is what grassroots
+                            learning looks like—simple rooms, big hearts, and young people growing together.
+                        </p>
+                        <Link to="/success-stories" className="btn btn-outline">See more moments</Link>
+                    </div>
+                </div>
+            </section>
+            <section className="section">
                 <div className="container text-center">
                     <h2 className="section-title">Success stories</h2>
                     <p className="section-subtitle mx-auto">Photos and moments from our classes and community work—where ideas turn into confidence.</p>
