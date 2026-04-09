@@ -1,12 +1,23 @@
 /* =============== CSS RESET & VARIABLES =============== */
 :root {
-    /* Logo palette: Go = teal, Tech = navy, Future = lime */
+    /* Wordmark (logo asset) — Go / Tech / Future / FOUNDATION */
+    --logo-go: #00a88f;
+    --logo-tech: #005a9c;
+    --logo-future: #8cc63f;
+    --logo-foundation-on-dark: #e1e1e1;
+    --logo-foundation-on-light: #5e6169;
+    --logo-bg-navy: #0b1426;
+    /* Footer: neutral grays (no blue/teal tint) so logo Tech blue / Go / Future stay clearly separate */
+    --footer-bg-top: #4f5863;
+    --footer-bg-mid: #3e4650;
+    --footer-bg-bottom: #323840;
+
+    /* Site UI (unchanged for pages/buttons) */
     --primary: #004b87;
     --primary-hover: #003666;
-    --secondary: #00a88f;
-    --secondary-hover: #008f7a;
-    --accent: #8cc63f;
-    --accent-hover: #7ab332;
+    --secondary: #00aa92;
+    --secondary-hover: #008875;
+    --accent: #8bc34a;
     --dark: #0f172a;
     --light: #f4fafe;
     --white: #ffffff;
@@ -295,26 +306,44 @@ img {
 }
 
 .nav-logo-go {
-    color: var(--secondary);
+    color: var(--logo-go);
 }
 
 .nav-logo-tech {
-    color: var(--primary);
+    color: var(--logo-tech);
 }
 
 .nav-logo-future {
-    color: var(--accent);
+    color: var(--logo-future);
 }
 
 .nav-logo-sub {
     font-size: 0.65rem;
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: #555;
+    color: var(--logo-foundation-on-light);
 }
 
-.logo span {
-    color: var(--primary);
+/* Do not use `.logo span { color }` — it overrides Go/Tech/Future wordmark colors */
+
+.nav-logo-link:visited .nav-logo-go,
+.nav-logo-link .nav-logo-go {
+    color: var(--logo-go);
+}
+
+.nav-logo-link:visited .nav-logo-tech,
+.nav-logo-link .nav-logo-tech {
+    color: var(--logo-tech);
+}
+
+.nav-logo-link:visited .nav-logo-future,
+.nav-logo-link .nav-logo-future {
+    color: var(--logo-future);
+}
+
+.nav-logo-link:visited .nav-logo-sub,
+.nav-logo-link .nav-logo-sub {
+    color: var(--logo-foundation-on-light);
 }
 
 .nav-links {
@@ -652,6 +681,64 @@ img {
     color: var(--primary);
 }
 
+/* =============== WHAT WE DO PAGE =============== */
+.what-we-do-section {
+    padding-top: 2rem;
+}
+
+.what-we-do-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 1.75rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.what-we-do-card {
+    background: var(--white);
+    border: 1px solid var(--gray-light);
+    border-radius: 12px;
+    padding: 1.35rem 1.4rem 1.45rem;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: var(--transition);
+}
+
+.what-we-do-card:hover {
+    border-color: rgba(0, 170, 146, 0.35);
+    box-shadow: var(--shadow-md);
+}
+
+.what-we-do-card-icon {
+    color: var(--secondary);
+    flex-shrink: 0;
+    line-height: 0;
+}
+
+.what-we-do-card-title {
+    font-family: var(--font-heading);
+    font-size: 1.08rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin: 0;
+    line-height: 1.25;
+}
+
+.what-we-do-card-text {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--gray);
+}
+
+@media (max-width: 700px) {
+    .what-we-do-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* =============== INNER PAGES =============== */
 .page-main {
     padding-top: 88px;
@@ -675,9 +762,9 @@ img {
     padding: 1.25rem 0 1.75rem;
     background: linear-gradient(
         125deg,
-        rgba(0, 168, 143, 0.07) 0%,
+        rgba(0, 170, 146, 0.07) 0%,
         rgba(244, 250, 254, 1) 38%,
-        rgba(140, 198, 63, 0.09) 100%
+        rgba(139, 195, 74, 0.09) 100%
     );
     border-bottom: 1px solid rgba(0, 75, 135, 0.08);
 }
@@ -689,7 +776,7 @@ img {
     right: -12%;
     width: min(50vw, 480px);
     height: min(100vw, 720px);
-    background: radial-gradient(ellipse at center, rgba(0, 168, 143, 0.14) 0%, transparent 62%);
+    background: radial-gradient(ellipse at center, rgba(0, 170, 146, 0.14) 0%, transparent 62%);
     pointer-events: none;
 }
 
@@ -700,7 +787,7 @@ img {
     left: -8%;
     width: min(42vw, 360px);
     height: min(70vw, 420px);
-    background: radial-gradient(ellipse at center, rgba(140, 198, 63, 0.1) 0%, transparent 58%);
+    background: radial-gradient(ellipse at center, rgba(139, 195, 74, 0.1) 0%, transparent 58%);
     pointer-events: none;
 }
 
@@ -845,8 +932,8 @@ img {
 }
 
 .about-pill-list li {
-    background: linear-gradient(135deg, rgba(0, 168, 143, 0.08) 0%, rgba(140, 198, 63, 0.06) 100%);
-    border: 1px solid rgba(0, 168, 143, 0.22);
+    background: linear-gradient(135deg, rgba(0, 170, 146, 0.08) 0%, rgba(139, 195, 74, 0.06) 100%);
+    border: 1px solid rgba(0, 170, 146, 0.22);
     border-radius: 999px;
     padding: 0.6rem 1.1rem;
     font-size: 0.92rem;
@@ -856,7 +943,7 @@ img {
 
 .about-quote-strip {
     padding: 2.25rem 0;
-    background: linear-gradient(90deg, rgba(0, 168, 143, 0.1) 0%, rgba(140, 198, 63, 0.12) 50%, rgba(0, 75, 135, 0.08) 100%);
+    background: linear-gradient(90deg, rgba(0, 170, 146, 0.1) 0%, rgba(139, 195, 74, 0.12) 50%, rgba(0, 75, 135, 0.08) 100%);
     border-top: 1px solid var(--gray-light);
     border-bottom: 1px solid var(--gray-light);
 }
@@ -920,14 +1007,14 @@ img {
 .value-card:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-lg);
-    border-color: rgba(0, 168, 143, 0.4);
+    border-color: rgba(0, 170, 146, 0.4);
 }
 
 .value-card-icon {
     width: 52px;
     height: 52px;
     border-radius: 12px;
-    background: linear-gradient(145deg, rgba(0, 168, 143, 0.2) 0%, rgba(0, 75, 135, 0.12) 50%, rgba(140, 198, 63, 0.15) 100%);
+    background: linear-gradient(145deg, rgba(0, 170, 146, 0.2) 0%, rgba(0, 75, 135, 0.12) 50%, rgba(139, 195, 74, 0.15) 100%);
     color: var(--primary);
     display: flex;
     align-items: center;
@@ -989,8 +1076,8 @@ img {
 }
 
 .contact-info-card--accent {
-    background: linear-gradient(135deg, rgba(0, 168, 143, 0.09) 0%, rgba(140, 198, 63, 0.08) 100%);
-    border-color: rgba(0, 168, 143, 0.28);
+    background: linear-gradient(135deg, rgba(0, 170, 146, 0.09) 0%, rgba(139, 195, 74, 0.08) 100%);
+    border-color: rgba(0, 170, 146, 0.28);
 }
 
 .contact-info-heading {
@@ -1069,14 +1156,14 @@ img {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--secondary) 0%, var(--accent) 50%, var(--primary) 100%);
+    background: linear-gradient(90deg, var(--logo-go) 0%, var(--logo-tech) 50%, var(--logo-future) 100%);
 }
 
 .contact-form-intro {
     margin-bottom: 1.5rem;
     padding-bottom: 1.25rem;
     border-bottom: 2px solid transparent;
-    border-image: linear-gradient(90deg, rgba(0, 168, 143, 0.35), rgba(140, 198, 63, 0.45)) 1;
+    border-image: linear-gradient(90deg, rgba(0, 170, 146, 0.35), rgba(139, 195, 74, 0.45)) 1;
 }
 
 .contact-form-title {
@@ -1097,14 +1184,14 @@ img {
     padding-top: 0.95rem;
     padding-bottom: 0.95rem;
     font-size: 1.02rem;
-    background: linear-gradient(135deg, var(--secondary) 0%, #00917c 100%);
-    box-shadow: 0 4px 18px rgba(0, 168, 143, 0.38);
+    background: linear-gradient(135deg, var(--logo-go) 0%, #008f7a 100%);
+    box-shadow: 0 4px 18px rgba(0, 168, 143, 0.35);
     border: none;
 }
 
 .contact-submit-btn.btn-primary:hover:not(:disabled) {
-    background: linear-gradient(135deg, var(--secondary-hover) 0%, var(--secondary) 100%);
-    box-shadow: 0 6px 22px rgba(0, 168, 143, 0.35);
+    background: linear-gradient(135deg, var(--logo-tech) 0%, var(--logo-go) 100%);
+    box-shadow: 0 6px 22px rgba(0, 90, 156, 0.35);
 }
 
 .contact-submit-btn.btn-primary:disabled {
@@ -1179,19 +1266,6 @@ img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-.footer-nav {
-    margin: 1rem 0;
-    font-size: 0.95rem;
-}
-
-.footer-nav a {
-    color: rgba(255, 255, 255, 0.85);
-}
-
-.footer-nav a:hover {
-    color: var(--secondary);
 }
 
 /* =============== CONTACT FORM =============== */
@@ -1271,9 +1345,68 @@ img {
 
 /* =============== FOOTER =============== */
 .footer {
-    background-color: var(--dark);
-    padding: 4rem 0 2rem;
-    color: rgba(255, 255, 255, 0.7);
+    position: relative;
+    padding: 3.75rem 0 2.25rem;
+    margin-top: 0;
+    color: rgba(255, 255, 255, 0.88);
+    background: linear-gradient(
+        165deg,
+        var(--footer-bg-top) 0%,
+        var(--footer-bg-mid) 48%,
+        var(--footer-bg-bottom) 100%
+    );
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        var(--logo-go) 0%,
+        var(--logo-tech) 50%,
+        var(--logo-future) 100%
+    );
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-wordmark {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.footer .nav-logo-title {
+    font-size: 1.5rem;
+}
+
+/* Same logo hex as elsewhere; shadow only helps separation from background (does not change brand colors) */
+.footer .nav-logo-go,
+.footer .nav-logo-tech,
+.footer .nav-logo-future {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+.footer .nav-logo-sub {
+    color: var(--logo-foundation-on-dark);
+    font-size: 0.7rem;
+    letter-spacing: 5px;
+    margin-top: 0.25rem;
+}
+
+.footer-tagline {
+    max-width: 34rem;
+    margin: 0 auto 1.25rem;
+    font-size: 0.98rem;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.82);
 }
 
 .footer h2 {
@@ -1282,27 +1415,46 @@ img {
     margin-bottom: 0.5rem;
 }
 
+.footer-nav {
+    margin: 1.25rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-nav a {
+    color: rgba(255, 255, 255, 0.92);
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.footer-nav a:hover {
+    color: var(--logo-go);
+}
+
 .social-links {
-    margin: 2rem 0;
+    margin: 1.75rem 0;
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
 }
 
 .social-links a {
-    color: var(--white);
-    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 600;
+    transition: color 0.2s ease;
 }
 
 .social-links a:hover {
-    color: var(--secondary);
+    color: var(--logo-future);
 }
 
 .copyright {
-    margin-top: 3rem;
-    font-size: 0.875rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 2rem;
+    margin-top: 2.5rem;
+    font-size: 0.82rem;
+    color: rgba(255, 255, 255, 0.58);
+    border-top: 1px solid rgba(255, 255, 255, 0.14);
+    padding-top: 1.75rem;
 }
 
 /* =============== RESPONSIVE =============== */

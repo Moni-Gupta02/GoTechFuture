@@ -1,26 +1,52 @@
 import React from 'react';
 
+const pillars = [
+    {
+        title: 'Coding & digital skills',
+        text: 'Hands-on programming and logical thinking so learners see technology as something they can use—not only watch.',
+    },
+    {
+        title: 'Career & study guidance',
+        text: 'Workshops and mentoring to connect interests with realistic next steps: subjects, courses, and opportunities.',
+    },
+    {
+        title: 'Supporting girls in STEM',
+        text: 'Safe spaces, peer support, and confidence-building so girls can aim for further study in tech and science.',
+    },
+    {
+        title: 'Community & creativity',
+        text: 'Murals, art, and group projects alongside tech—for teamwork, expression, and belonging.',
+    },
+];
+
 const WhatWeDo = () => {
     return (
-        <main className="page-main">
-            <header className="page-hero">
-                <div className="container">
-                    <h1>What we do</h1>
-                    <p className="page-lead">
-                        GoTechFuture Foundation runs programs that blend technology education, mentoring, and academic preparation—
-                        with a strong focus on supporting girls and young women to thrive in school and beyond.
+        <main className="page-main page-what-we-do">
+            <header className="page-hero page-hero--brand">
+                <div className="container page-hero-inner">
+                    <p className="page-hero-eyebrow">Programs</p>
+                    <h1 className="page-hero-title">What we do</h1>
+                    <p className="page-lead page-hero-lead">
+                        We run practical programs in schools and communities—blending coding, mentoring, and preparation
+                        so young people, especially girls, can thrive in school and beyond.
                     </p>
                 </div>
             </header>
-            <section className="section">
-                <div className="container container-sm">
-                    <ul className="check-list" style={{ fontSize: '1.05rem', color: 'var(--gray)' }}>
-                        <li><strong style={{ color: 'var(--dark)' }}>Teaching coding and digital literacy.</strong> We introduce programming concepts, logical thinking, and creative projects so students can see technology as a tool they can master—not something distant or only for others.</li>
-                        <li><strong style={{ color: 'var(--dark)' }}>Career guidance and exploration.</strong> Many young people lack clear information about study paths and jobs. We facilitate workshops, conversations, and mentoring to help them connect their interests to realistic next steps.</li>
-                        <li><strong style={{ color: 'var(--dark)' }}>Supporting girls to prepare for education.</strong> We work to reduce barriers by building confidence, study habits, and peer support, so girls feel ready to pursue further study—including in STEM fields.</li>
-                        <li><strong style={{ color: 'var(--dark)' }}>Helping students plan for future study.</strong> From choosing subjects to understanding scholarships and admissions, we help learners and families navigate decisions about secondary and higher education.</li>
-                        <li><strong style={{ color: 'var(--dark)' }}>Arts, community, and wellbeing.</strong> Creative activities—painting, murals, and group projects—reinforce teamwork, expression, and a sense of belonging alongside technical learning.</li>
-                    </ul>
+            <section className="section what-we-do-section">
+                <div className="container">
+                    <div className="what-we-do-grid">
+                        {pillars.map((item) => (
+                            <article key={item.title} className="what-we-do-card">
+                                <div className="what-we-do-card-icon" aria-hidden="true">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                        <polyline points="20 6 9 17 4 12" />
+                                    </svg>
+                                </div>
+                                <h2 className="what-we-do-card-title">{item.title}</h2>
+                                <p className="what-we-do-card-text">{item.text}</p>
+                            </article>
+                        ))}
+                    </div>
                 </div>
             </section>
         </main>

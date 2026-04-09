@@ -82,7 +82,7 @@ const Contact = () => {
                             <h2 className="contact-info-heading">Follow along</h2>
                             <ul className="contact-social-list">
                                 <li>
-                                    <a href="https://www.youtube.com/@gotechfuture" target="_blank" rel="noopener noreferrer">YouTube</a>
+                                    <a href="https://www.youtube.com/@GoTechFutureFoundation" target="_blank" rel="noopener noreferrer">YouTube</a>
                                 </li>
                                 <li>
                                     <a href="https://www.linkedin.com/company/go-tech-future-foundation/?viewAsMember=true" target="_blank" rel="noopener noreferrer">LinkedIn</a>
