@@ -6,7 +6,7 @@ const Hero = () => {
         <header className="hero" id="home">
             <div className="hero-container">
                 <div className="hero-content">
-                    <h1>Learning, support, and hope for every young person</h1>
+                    <h1>Coding, school support, and guidance for girls and youth</h1>
                     <p>
                         GoTechFuture Foundation is a non-profit that teaches coding, answers career and study questions, and walks with
                         girls and young women step by step. We want every learner to feel ready for school, work, and life—not alone, and
